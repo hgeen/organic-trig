@@ -1,0 +1,32 @@
+sin
+cos
+tan
+sec
+csc
+cot
+(asin) arcsin X
+(acos) arccos X
+(atan) arctan X
+(asec) arcsec X
+(ver, siv) versin X = 1 - cos X
+(vcs) vercos X
+(cvs) coversin X
+(cvc) covercos X
+(hvs, hv) haversin X
+(hvc) havercos X
+(hcv) hacoversin X
+(hcc) hacovercos X
+(arcsiv, arcver, asiv, aver) arcversin X
+(arcvcs, avcs) arcvercos X
+(arccvs, acvs) arccoversin X
+(arccvc, acvc) arccovercos X
+(archv, ahv, arc_hv) archaversin X
+(archvc, ahvc, arc_hvc) archavercos X
+(archcv, ahcv, arc_hcv) archacoversin X
+(archcc, ahcc) archacovercos X
+(exs) exsec X
+(excsc, exc) excocsc X
+(arcexs, aexs) arcexsec X
+(arcexc, aexc) arcexcocsc X = 
+(crd) chord X = 2 sin (X/2)
+(acrd, arc_crd) arccrd X = 2 arcsin (c/2r)

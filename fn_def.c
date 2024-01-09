@@ -15,36 +15,37 @@
 
 //normal functions
 
-_verse versin (double X) {
+_verse ver (double X) {
   return 1-cos(X);
-}
+} //versin
 
 _verse vercos (double X) {
   return 1+cos(X);
 }
 
-_verse coversin (double X) {
+_verse cvs (double X) {
   return 1-sin(X);
-}
+} //coversin
 
-_verse covercos (double X) {
+_verse cvc (double X) {
   return 1+sin(X);
-}
+} //covercos
 
-_verse haversin (double X) {
+_verse hv (double X) {
   return versin(X)/2;
-}
+} //haversin
 
-_verse havercos (double X) {
+_verse hvc (double X) {
   return vercos(X)/2;
-}
-_verse hacoversin (double X) {
-  return coversin(X)/2;
-}
+} //havercos
 
-_verse hacovercos (double X) {
+_verse hcv (double X) {
+  return coversin(X)/2;
+} //hacoversin
+
+_verse hcc (double X) {
   return covercos(X)/2;
-}
+} //hacovercos
 
 double chord (double X) {
   return 2*sin(X/2);
@@ -73,36 +74,37 @@ double cot (double X) {
 
 //arc functions
 
-_verse arcversin (double X) {
+_verse aver (double X) {
   return acos(1-X);
 }
 
-_verse arcvercos (double X) {
+_verse avcs (double X) {
   return acos(X-1);
-}
+} //arcvercos
 
-_verse arccoversin (double X) {
+_verse acvs (double X) {
   return asin(1-X);
-}
+} //arccoversin
 
-_verse arccovercos (double X) {
+_verse acvc (double X) {
   return asin(X-1);
-}
+} //arccovercos
 
-_verse archaversin (double X) {
+_verse ahv (double X) {
   return 2*asin(sqrt(X));
-}
-_verse archavercos (double X) {
+} //archaversin
+
+_verse ahvc (double X) {
   return 2*acos(sqrt(X));
-}
+} //archavercos
 
-_verse archacoversin (double X) {
+_verse ahcv (double X) {
   return asin(1-(2*X));
-}
+} //archacoversin
 
-_verse archacovercos (double X) {
+_verse ahcc (double X) {
   return asin((2*X)-1);
-}
+} //archacovercos
 
 double acrd (double C, double r) {
   return 2*asin(C/(2*r));
@@ -116,10 +118,10 @@ _sec arccsc (double X) {
   return asin(1/X);
 }
 
-_sec arcexsec (double X) {
+_sec aexs (double X) {
   return arcsec(X+1);
 }
-_sec arcexcsc (double X) {
+_sec aexc (double X) {
   return arccsc( X+1);
 }
 
@@ -132,45 +134,14 @@ double arccot (double X) {
 //alt functions, for simplicites sake
 
 //verse sines
-_alias ver (double X) {
-  return versin(X);
-} //versin
 
 _alias siv (double X) {
-  return versin(X);
+  return ver(X);
 } //versin
 
 _alias vcs (double X) {
   return vercos(X);
 } //vercos
-
-_alias cvs (double X) {
-  return coversin(X);
-} //coversin
-
-_alias cvc (double X) {
-  return covercos(X);
-} //covercos
-
-_alias hv (double X) {
-  return haversin(X);
-} //haversin
-
-_alias hvs (double X) {
-  return haversin(X);
-} //haversin
-
-_alias hvc (double X) {
-  return havercos(X);
-} //havercos
-
-_alias hcv (double X) {
-  return hacoversin(X);
-} //hacoversin
-
-_alias hcc (double X) {
-  return hacovercos(X);
-} //hacovercos
 
 _alias crd (double X) {
   return chord(X);
@@ -187,50 +158,18 @@ _alias exc (double X) {
 
 //arc verse
 
-_alias aver (double X) {
-  return arcversin(X);
-} //arcversin
-
 _alias asiv (double X) {
-  return arcversin(X);
+  return aver(X);
 } //arcversin
 
-_alias avcs (double X) {
-  return arcvercos(X);
-} // arcvercos
-
-_alias acvs (double X) {
-  return arccoversin(X);
-} //arcoversin
-
-_alias acvc (double X) {
-  return arccovercos(X);
+_alias arcexs (double X) {
+  return aexs(X);
 }
 
-_alias ahv (double X) {
-  return archaversin(X);
-} //haversin
-
-_alias ahvs (double X) {
-  return archaversin(X);
-} //haversin
-
-_alias ahvc (double X) {
-  return archavercos(X);
-} //havercos
-
-_alias ahcv (double X) {
-  return archacoversin(X);
-} //hacoversin
-
-_alias ahcc (double X) {
-  return archacovercos(X);
-} //hacovercos
-
-_alias aexs (double X) {
-  return arcexsec(X);
+_alias arcexc (double X) {
+  return aexc(X);
 }
 
-_alias aexc (double X) {
-  return arcexcsc(X);
+_alias acot (double X) {
+  return arccot(X);
 }

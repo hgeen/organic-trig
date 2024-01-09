@@ -1,43 +1,67 @@
 #include <math.h>
 
-#define TM_PI 3.14159265358979323846
-#define TM_PI_2 1.57079632679489661923
-#define TM_PI_4 0.78539816339744830962
-#define TM_N_PI_2 -1*TM_PI_2
-#define TM_N_PI_4 -1*TM_PI_4
-#define TM_N_1_PI 0.31830988618379067154
-#define TM_N_2_PI 0.63661977236758134308
-#define TM_E 2.7182818284590452354
-#define TM_TAU 2*PI
-#define TM_SQRT2 1.41421356237309504880
-
 typedef double _verse;
+typedef double _sec;
 typedef double _alias;
 
-double versin (double X);
-double vercos (double X);
-double coversin (double X);
-double covercos (double X);
-double haversin (double X);
-double havercos (double X);
-double hacoversin (double X);
-double hacovercos (double X);
-double arcversin (double X);
-double arcvercos (double X);
-double arccoversin (double X);
-double arccovercos (double X);
-double archaversin (double X);
-double archavercos (double X);
-double archacoversin (double X);
-double archacovercos (double X);
+//std functions
+_verse versin (double X);
+_verse vercos (double X);
+_verse coversin (double X);
+_verse covercos (double X);
+_verse haversin (double X);
+_verse havercos (double X);
+_verse hacoversin (double X);
+_verse hacovercos (double X);
 double chord (double X);
-double arccrd (double C, double r);
+_sec sec (double X);
+_sec csc (double X);
+_sec exsec (double X);
+_sec excsc (double X);
+double cot (double X);
 
-//alt functions, for simplicites sake
+//arc functions
+_verse arcversin (double X);
+_verse arcvercos (double X);
+_verse arccoversin (double X);
+_verse arccovercos (double X);
+_verse archaversin (double X);
+_verse archavercos (double X);
+_verse archacoversin (double X);
+_verse archacovercos (double X);
+double acrd (double C, double r);
+_sec arcsec (double X);
+_sec arccsc (double X);
+_sec arcexsec (double X);
+_sec arcexcsc (double X);
+double arccot (double X);
 
-//verse sines
-_alias ver (double X); //versin
-_alias siv (double X); //versin
-_alias vcs (double X); //vercos
-_alias cvs (double X); //coversin
-_alias cvc (double X); //covercos
+//alias
+_alias ver (double X);
+_alias siv (double X);
+_alias vcs (double X);
+_alias cvs (double X);
+_alias cvc (double X);
+_alias hv (double X);
+_alias hvs (double X);
+_alias hvc (double X);
+_alias hcv (double X);
+_alias hcc (double X);
+_alias crd (double X);
+_alias exs (double X);
+_alias exc (double X);
+
+//arc alias
+
+_alias aver (double X);
+_alias asiv (double X);
+_alias avcs (double X);
+_alias acvs (double X);
+_alias acvc (double X);
+_alias ahv (double X);
+_alias ahvs (double X);
+_alias ahvc (double X);
+_alias ahcv (double X);
+_alias ahcc (double X);
+_alias aexs (double X);
+_alias aexc (double X);

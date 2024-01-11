@@ -1,25 +1,12 @@
 #include "tmath.h"
 
-#define TM_PI 3.14159265358979323846
-#define TM_PI_2 1.57079632679489661923
-#define TM_PI_4 0.78539816339744830962
-#define TM_N_PI_2 -1*TM_PI_2
-#define TM_N_PI_4 -1*TM_PI_4
-#define TM_1_PI 0.31830988618379067154
-#define TM_2_PI 0.63661977236758134308
-#define TM_N_1_PI -1*TM_1_PI
-#define TM_N_2_PI -1*TM_2_PI
-#define TM_E 2.7182818284590452354
-#define TM_TAU 2*PI
-#define TM_SQRT2 1.41421356237309504880
-
 //normal functions
 
 _verse ver (double X) {
   return 1-cos(X);
 } //versin
 
-_verse vercos (double X) {
+_verse vcs (double X) {
   return 1+cos(X);
 }
 
@@ -32,19 +19,19 @@ _verse cvc (double X) {
 } //covercos
 
 _verse hv (double X) {
-  return versin(X)/2;
+  return ver(X)/2;
 } //haversin
 
 _verse hvc (double X) {
-  return vercos(X)/2;
+  return vcs(X)/2;
 } //havercos
 
 _verse hcv (double X) {
-  return coversin(X)/2;
+  return cvs(X)/2;
 } //hacoversin
 
 _verse hcc (double X) {
-  return covercos(X)/2;
+  return cvc(X)/2;
 } //hacovercos
 
 double chord (double X) {
@@ -59,11 +46,11 @@ _sec csc (double X) {
   return 1/sin(X);
 }
 
-_sec exsec (double X) {
+_sec exs (double X) {
   return (1-cos(X))/cos (X);
 }
 
-_sec excsc (double X) {
+_sec exc (double X) {
   return (1-sin(X))/sin(X);
 }
 
@@ -110,19 +97,19 @@ double acrd (double C, double r) {
   return 2*asin(C/(2*r));
 }
 
-_sec arcsec (double X) {
+_sec asec (double X) {
   return acos(1/X);
 }
 
-_sec arccsc (double X) {
+_sec acsc (double X) {
   return asin(1/X);
 }
 
 _sec aexs (double X) {
-  return arcsec(X+1);
+  return asec(X+1);
 }
 _sec aexc (double X) {
-  return arccsc( X+1);
+  return acsc(X+1);
 }
 
 double arccot (double X) {
@@ -139,20 +126,16 @@ _alias siv (double X) {
   return ver(X);
 } //versin
 
-_alias vcs (double X) {
-  return vercos(X);
-} //vercos
-
 _alias crd (double X) {
   return chord(X);
 } //chord
 
-_alias exs (double X) {
-  return exsec(X);
+_alias exsec (double X) {
+  return exs(X);
 } //exsec
 
-_alias exc (double X) {
-  return exsec(X);
+_alias excsc (double X) {
+  return exc(X);
 } //excsc
 
 
@@ -172,4 +155,12 @@ _alias arcexc (double X) {
 
 _alias acot (double X) {
   return arccot(X);
+}
+
+_alias arcsec (double X) {
+  return asec(X);
+}
+
+_alias arccsc (double X) {
+  return acsc(X);
 }
